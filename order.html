@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>إتمام الطلب | مضغوط ومندي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.order-container{
+max-width:700px;
+margin:60px auto;
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.order-container h2{
+text-align:center;
+margin-bottom:30px;
+color:#8b5e34;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group label{
+display:block;
+margin-bottom:8px;
+font-weight:700;
+}
+
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-family:'Cairo',sans-serif;
+}
+
+.form-group textarea{
+height:120px;
+resize:none;
+}
+
+.order-btn{
+width:100%;
+background:#25d366;
+color:#fff;
+border:none;
+padding:15px;
+font-size:18px;
+font-weight:700;
+border-radius:8px;
+cursor:pointer;
+}
+
+.order-btn:hover{
+opacity:.9;
+}
+
+.selected-item{
+background:#f7f0e6;
+padding:15px;
+border-radius:8px;
+margin-bottom:20px;
+font-weight:700;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="top-bar">
+⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
+</div>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Logo">
+
+<div class="logo-text">
+<h2>مضغوط ومندي</h2>
+<span>نكهات خليجية أصيلة</span>
+</div>
+
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">الرئيسية</a></li>
+<li><a href="menu.html">المنيو</a></li>
+</ul>
+
+</nav>
+
+<div class="order-container">
+
+<h2>إتمام الطلب</h2>
+
+<div class="selected-item">
+الوجبة المختارة:
+<span id="mealName"></span>
+</div>
+
+<div class="form-group">
+<label>الاسم</label>
+<input type="text" id="name">
+</div>
+
+<div class="form-group">
+<label>رقم الهاتف</label>
+<input type="tel" id="phone">
+</div>
+
+<div class="form-group">
+<label>العنوان</label>
+<input type="text" id="address">
+</div>
+
+<div class="form-group">
+<label>تاريخ الطلب</label>
+<input type="date" id="date">
+</div>
+
+<div class="form-group">
+<label>ملاحظات</label>
+<textarea id="notes"></textarea>
+</div>
+
+<button class="order-btn" onclick="sendOrder()">
+إرسال الطلب عبر واتساب
+</button>
+
+</div>
+
+<footer>
+<p>
+© <span id="year"></span>
+مضغوط ومندي - جميع الحقوق محفوظة
+</p>
+</footer>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+const params = new URLSearchParams(window.location.search);
+
+const item = params.get("item") || "غير محدد";
+
+document.getElementById("mealName").textContent = item;
+
+function sendOrder(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+let date = document.getElementById("date").value;
+let notes = document.getElementById("notes").value;
+
+let message =
+`السلام عليكم
+
+الاسم: ${name}
+
+الهاتف: ${phone}
+
+الوجبة: ${item}
+
+العنوان: ${address}
+
+تاريخ الطلب: ${date}
+
+ملاحظات: ${notes}`;
+
+let whatsapp =
+`https://wa.me/201044474434?text=${encodeURIComponent(message)}`;
+
+window.open(whatsapp,'_blank');
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>اللحمة | مضغوط ومندي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
+</div>
+
+<nav class="navbar">
+
+<div class="logo">
+    <img src="images/logo.png">
+
+    <div class="logo-text">
+        <h2>مضغوط ومندي</h2>
+        <span>نكهات خليجية أصيلة</span>
+    </div>
+</div>
+ <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="menu.html">المنيو</a></li>
+<li>
+<a href="cart.html">
+🛒 السلة
+</a>
+</li>
+    </ul>
+
+
+</nav>
+
+<!-- مندي اللحم -->
+
+<section class="menu-section">
+
+<div class="container">
+
+<h2>مندي اللحم</h2>
+
+<div class="categories-grid">
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مندي لحم</h3>
+
+<p>
+لحم طري مطهو ببطء مع أرز مندي فاخر وبهارات خليجية أصلية.
+</p>
+
+<p><strong>السعر: 520 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مندي لحم فاخر</h3>
+
+<p>
+قطعة لحم كبيرة مع أرز مندي فاخر تكفي أكثر من شخص.
+</p>
+
+<p><strong>السعر: 650 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- مضغوط اللحم -->
+
+<section class="menu-section">
+
+<div class="container">
+
+<h2>مضغوط اللحم</h2>
+
+<div class="categories-grid">
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مضغوط لحم</h3>
+
+<p>
+لحم مطهو على الطريقة الخليجية مع أرز المضغوط المميز.
+</p>
+
+<p><strong>السعر: 540 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مضغوط لحم فاخر</h3>
+
+<p>
+وجبة خاصة من اللحم الفاخر مع أرز المضغوط والتوابل المميزة.
+</p>
+
+<p><strong>السعر: 680 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© <span id="year"></span>
+مضغوط ومندي - جميع الحقوق محفوظة
+</p>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+<script src="js-cart.js"></script>
+</body>
+
+</html>

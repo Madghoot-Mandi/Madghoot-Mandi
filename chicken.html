@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الدجاج | مضغوط ومندي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
+</div>
+
+<nav class="navbar">
+
+<div class="logo">
+    <img src="images/logo.png">
+
+    <div class="logo-text">
+        <h2>مضغوط ومندي</h2>
+        <span>نكهات خليجية أصيلة</span>
+    </div>
+</div>
+
+ <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="menu.html">المنيو</a></li>
+<li>
+<a href="cart.html">
+🛒 السلة
+</a>
+</li>
+    </ul>
+
+
+</nav>
+
+<!-- قسم المندي -->
+
+<section class="menu-section">
+
+<div class="container">
+
+<h2>مندي الدجاج</h2>
+
+<div class="categories-grid">
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1514516345957-556ca7f68af9?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مندي دجاج كامل</h3>
+
+<p>
+دجاج كامل متبل بالبهارات الخليجية مع أرز مندي فاخر.
+</p>
+
+<p><strong>السعر: 350 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مندي نصف دجاج</h3>
+
+<p>
+نصف دجاجة مع أرز مندي وتتبيلة أصلية.
+</p>
+
+<p><strong>السعر: 220 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- قسم المضغوط -->
+
+<section class="menu-section">
+
+<div class="container">
+
+<h2>مضغوط الدجاج</h2>
+
+<div class="categories-grid">
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مضغوط دجاج كامل</h3>
+
+<p>
+دجاج مطهو على الطريقة الخليجية مع أرز المضغوط.
+</p>
+
+<p><strong>السعر: 360 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مضغوط نصف دجاج</h3>
+
+<p>
+نصف دجاجة مع أرز المضغوط والبهارات الخاصة.
+</p>
+
+<p><strong>السعر: 230 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- قسم المسخن -->
+
+<section class="menu-section">
+
+<div class="container">
+
+<h2>المسخن</h2>
+
+<div class="categories-grid">
+
+<div class="category-card">
+
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600"
+style="width:100%;border-radius:10px;">
+
+<h3>مسخن دجاج</h3>
+
+<p>
+مسخن محضر بالبصل والسماق والزيت البلدي.
+</p>
+
+<p><strong>السعر: 180 جنيه</strong></p>
+
+<button
+class="add-cart-btn"
+onclick="addToCart(
+'مندي دجاج كامل',
+350
+)">
+أضف للسلة
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© <span id="year"></span>
+مضغوط ومندي - جميع الحقوق محفوظة
+</p>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+<script src="js-cart.js"></script>
+</body>
+
+</html>
