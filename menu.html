@@ -17,7 +17,7 @@
 <body>
 
 ```
-<div class="top-bar">
+<div class="top-bar" data-i18n="topBar">
     ⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
 </div>
 
@@ -26,22 +26,42 @@
 <div class="logo">
     <img src="images/logo.png">
 
-    <div class="logo-text">
-        <h2>مضغوط ومندي</h2>
-        <span>نكهات خليجية أصيلة</span>
+    <div>
+      <h2 data-i18n="logoTitle">
+مضغوط ومندي
+</h2>
+
+<span data-i18n="logoSubtitle">
+نكهات خليجية أصيلة
+</span>
     </div>
+
 </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="menu.html">المنيو</a></li>
-<li>
-<a href="cart.html">
-🛒 السلة
-</a>
-</li>
-    </ul>
+<ul class="nav-links">
 
+    <li>
+        <a href="index.html" data-i18n="home">
+            الرئيسية
+        </a>
+    </li>
+
+    <li>
+        <a href="menu.html" data-i18n="menu">
+            المنيو
+        </a>
+    </li>
+
+    <li>
+        <a href="cart.html" data-i18n="cart">
+            🛒 السلة
+        </a>
+    </li>
+
+</ul>
+<button id="languageBtn" onclick="toggleLanguage()">
+    🇬🇧 English
+</button>
 
 </nav>
 
@@ -49,7 +69,9 @@
 
     <div class="container">
 
-   <h2 class="menu-title">المنيو</h2>
+<h2 class="menu-title" data-i18n="menu">
+    المنيو
+</h2>
 
         <div class="categories-grid">
 
@@ -57,15 +79,17 @@
 
     <img src="images/chicken-category.jpg" alt="الدجاج">
 
-    <h3>الدجاج</h3>
+  <h3 data-i18n="chicken">
+الدجاج
+</h3>
 
-    <p>
-        مندي دجاج - مضغوط دجاج - مسخن
-    </p>
+<p data-i18n="menuChickenDescription">
+مندي دجاج - مضغوط دجاج - مسخن
+</p>
 
-    <a href="chicken.html">
-        تصفح الآن
-    </a>
+<a href="chicken.html" data-i18n="browseNow">
+تصفح الآن
+</a>
 
 </div>
 
@@ -73,15 +97,17 @@
 
     <img src="images/meat-category.jpg" alt="اللحمة">
 
-    <h3>اللحمة</h3>
+<h3 data-i18n="meat">
+    اللحمة
+</h3>
 
-    <p>
-        مندي لحم - مضغوط لحم
-    </p>
+<p data-i18n="menuMeatDescription">
+    مندي لحم - مضغوط لحم
+</p>
 
-    <a href="meat.html">
-        تصفح الآن
-    </a>
+<a href="meat.html" data-i18n="browseNow">
+    تصفح الآن
+</a>
 
 </div>
 
@@ -89,15 +115,17 @@
 
     <img src="images/trays-category.jpg" alt="الصواني والعزائم">
 
-    <h3>الصواني والعزائم</h3>
+<h3 data-i18n="traysSection">
+    الصواني والعزائم
+</h3>
 
-    <p>
-        صواني وعزائم للمناسبات والتجمعات حسب الطلب
-    </p>
+<p data-i18n="menuTraysDescription">
+    صواني وعزائم للمناسبات والتجمعات حسب الطلب
+</p>
 
-    <a href="trays.html">
-        تصفح الآن
-    </a>
+<a href="trays.html" data-i18n="browseNow">
+    تصفح الآن
+</a>
 
 </div>
 
@@ -105,15 +133,17 @@
 
     <img src="images/extras-category.jpg" alt="الإضافات">
 
-    <h3>الإضافات</h3>
+<h3 data-i18n="extrasSection">
+    الإضافات
+</h3>
 
-    <p>
-        صوصات - سلطات - إضافات متنوعة
-    </p>
+<p data-i18n="menuExtrasDescription">
+    صوصات - سلطات - إضافات متنوعة
+</p>
 
-    <a href="extras.html">
-        تصفح الآن
-    </a>
+<a href="extras.html" data-i18n="browseNow">
+    تصفح الآن
+</a>
 
 </div>
 
@@ -124,9 +154,14 @@
 </section>
 
 <footer>
-    <p>
-        © <span id="year"></span> مضغوط ومندي - جميع الحقوق محفوظة
-    </p>
+  <p>
+    © <span id="year"></span>
+
+    <span data-i18n="footerRights">
+        مضغوط ومندي - جميع الحقوق محفوظة
+    </span>
+
+</p>
 </footer>
 
 <script>
@@ -134,7 +169,8 @@
         new Date().getFullYear();
 </script>
 ```
-
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
 </body>
 
 </html>

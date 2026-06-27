@@ -1,23 +1,27 @@
-function addToCart(name, price) {
+function addToCart(productId, price) {
 
     let cart = JSON.parse(
         localStorage.getItem("cart")
     ) || [];
 
     let existingItem = cart.find(
-        item => item.name === name
+        item => item.id === productId
     );
 
     if (existingItem) {
 
-        existingItem.qty += 1;
+        existingItem.qty++;
 
     } else {
 
         cart.push({
-            name: name,
+
+            id: productId,
+
             price: price,
+
             qty: 1
+
         });
 
     }
@@ -27,6 +31,11 @@ function addToCart(name, price) {
         JSON.stringify(cart)
     );
 
-    alert("تمت إضافة المنتج إلى السلة");
+    const currentLang =
+        localStorage.getItem("site-language") || "ar";
+
+    alert(
+        translations[currentLang].addedToCart
+    );
 
 }

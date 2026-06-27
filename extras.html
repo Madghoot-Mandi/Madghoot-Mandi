@@ -15,8 +15,8 @@
 
 <body>
 
-<div class="top-bar">
-⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
+<div class="top-bar" data-i18n="topBar">
+    ⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
 </div>
 
 <nav class="navbar">
@@ -24,22 +24,43 @@
 <div class="logo">
     <img src="images/logo.png">
 
-    <div class="logo-text">
-        <h2>مضغوط ومندي</h2>
-        <span>نكهات خليجية أصيلة</span>
+    <div>
+      <h2 data-i18n="logoTitle">
+مضغوط ومندي
+</h2>
+
+<span data-i18n="logoSubtitle">
+نكهات خليجية أصيلة
+</span>
     </div>
+
 </div>
 
  <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="menu.html">المنيو</a></li>
+
 <li>
-<a href="cart.html">
+<a href="index.html" data-i18n="home">
+الرئيسية
+</a>
+</li>
+
+<li>
+<a href="menu.html" data-i18n="menu">
+المنيو
+</a>
+</li>
+
+<li>
+<a href="cart.html" data-i18n="cart">
 🛒 السلة
 </a>
 </li>
-    </ul>
 
+</ul>
+
+<button id="languageBtn" onclick="toggleLanguage()">
+    🇬🇧 English
+</button>
 
 </nav>
 
@@ -47,7 +68,9 @@
 
 <div class="container">
 
-<h2>الإضافات</h2>
+<h2 data-i18n="extrasSection">
+الإضافات
+</h2>
 
 <div class="categories-grid">
 
@@ -56,18 +79,26 @@
 <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>صوص الثوم</h3>
+<h3 data-i18n="garlicSauceTitle">
+صوص الثوم
+</h3>
 
-<p>صوص ثوم كريمي محضر يومياً.</p>
+<p data-i18n="garlicSauceDesc">
+صوص ثوم كريمي محضر يومياً.
+</p>
 
-<p><strong>السعر: 15 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('garlicSauce',15)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -78,18 +109,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>صوص حار</h3>
+<h3 data-i18n="spicySauceTitle">
+صوص حار
+</h3>
 
-<p>صوص حار لعشاق النكهات القوية.</p>
+<p data-i18n="spicySauceDesc">
+صوص حار لعشاق النكهات القوية.
+</p>
 
-<p><strong>السعر: 15 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('hotSauce',15)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -100,18 +139,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>طحينة</h3>
+<h3 data-i18n="tahiniTitle">
+طحينة
+</h3>
 
-<p>طحينة طازجة بنكهة مميزة.</p>
+<p data-i18n="tahiniDesc">
+طحينة طازجة بنكهة مميزة.
+</p>
 
-<p><strong>السعر: 20 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('tahini',20)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -122,18 +169,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>سلطة خضراء</h3>
+<h3 data-i18n="greenSaladTitle">
+سلطة خضراء
+</h3>
 
-<p>سلطة طازجة من أجود الخضروات.</p>
+<p data-i18n="greenSaladDesc">
+سلطة طازجة من أجود الخضروات.
+</p>
 
-<p><strong>السعر: 25 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('greenSalad',25)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -144,18 +199,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>سلطة زبادي</h3>
+<h3 data-i18n="yogurtSaladTitle">
+سلطة زبادي
+</h3>
 
-<p>سلطة زبادي منعشة مع النعناع.</p>
+<p data-i18n="yogurtSaladDesc">
+سلطة زبادي منعشة مع النعناع.
+</p>
 
-<p><strong>السعر: 25 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('yogurtSalad',25)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -166,18 +229,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>أرز إضافي</h3>
+<h3 data-i18n="extraRiceTitle">
+أرز إضافي
+</h3>
 
-<p>طبق أرز إضافي يكفي لشخصين.</p>
+<p data-i18n="extraRiceDesc">
+طبق أرز إضافي يكفي لشخصين.
+</p>
 
-<p><strong>السعر: 40 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('extraRice',40)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -188,18 +259,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600"
 style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
 
-<h3>خبز إضافي</h3>
+<h3 data-i18n="extraBreadTitle">
+خبز إضافي
+</h3>
 
-<p>خبز طازج مناسب لجميع الوجبات.</p>
+<p data-i18n="extraBreadDesc">
+خبز طازج مناسب لجميع الوجبات.
+</p>
 
-<p><strong>السعر: 10 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('extraBread',10)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -214,7 +293,11 @@ onclick="addToCart(
 <footer>
 <p>
 © <span id="year"></span>
+
+<span data-i18n="footerRights">
 مضغوط ومندي - جميع الحقوق محفوظة
+</span>
+
 </p>
 </footer>
 
@@ -223,6 +306,8 @@ document.getElementById("year").textContent =
 new Date().getFullYear();
 </script>
 <script src="js-cart.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
 </body>
 
 </html>

@@ -15,8 +15,8 @@
 
 <body>
 
-<div class="top-bar">
-⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
+<div class="top-bar" data-i18n="topBar">
+    ⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
 </div>
 
 <nav class="navbar">
@@ -24,22 +24,36 @@
 <div class="logo">
     <img src="images/logo.png">
 
-    <div class="logo-text">
-        <h2>مضغوط ومندي</h2>
-        <span>نكهات خليجية أصيلة</span>
+    <div>
+        <h2 data-i18n="logoTitle">مضغوط ومندي</h2>
+        <span data-i18n="logoSubtitle">نكهات خليجية أصيلة</span>
     </div>
 </div>
 
- <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="menu.html">المنيو</a></li>
+<ul class="nav-links">
+
 <li>
-<a href="cart.html">
+<a href="index.html" data-i18n="home">
+الرئيسية
+</a>
+</li>
+
+<li>
+<a href="menu.html" data-i18n="menu">
+المنيو
+</a>
+</li>
+
+<li>
+<a href="cart.html" data-i18n="cart">
 🛒 السلة
 </a>
 </li>
-    </ul>
 
+</ul>
+<button id="languageBtn" onclick="toggleLanguage()">
+    🇬🇧 English
+</button>
 
 </nav>
 
@@ -47,7 +61,9 @@
 
 <div class="container">
 
-<h2>الصواني والعزائم</h2>
+<h2 data-i18n="traysSection">
+الصواني والعزائم
+</h2>
 
 <div class="category-card">
 
@@ -55,34 +71,40 @@
 src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=1200"
 style="width:100%;max-height:450px;object-fit:cover;border-radius:12px;">
 
-<h3 style="margin-top:20px;">
+<h3
+style="margin-top:20px;"
+data-i18n="traysTitle">
+
 خدمة الصواني والعزائم
+
 </h3>
 
-<p style="line-height:2;margin-top:15px;">
+<p style="line-height:2;margin-top:15px;" data-i18n="traysDescription">
+نوفر صواني وعزائم للمناسبات العائلية والتجمعات والولائم بأحجام مختلفة تناسب جميع الاحتياجات.
+</p>
 
-نوفر صواني وعزائم للمناسبات العائلية والتجمعات والولائم
-بأحجام مختلفة تناسب جميع الاحتياجات.
+<h4 data-i18n="traysCanPrepare">
+يمكن تجهيز:
+</h4>
 
-يمكن تجهيز: <br><br>
+<ul class="trays-list">
+    <li data-i18n="traysItem1">✓ مندي دجاج</li>
+    <li data-i18n="traysItem2">✓ مندي لحم</li>
+    <li data-i18n="traysItem3">✓ مضغوط دجاج</li>
+    <li data-i18n="traysItem4">✓ مضغوط لحم</li>
+    <li data-i18n="traysItem5">✓ مسخن</li>
+</ul>
 
-✓ مندي دجاج<br>
-✓ مندي لحم<br>
-✓ مضغوط دجاج<br>
-✓ مضغوط لحم<br>
-✓ مسخن<br>
-
-<br>
-
+<p data-i18n="traysPrices">
 يتم تحديد الكميات والأسعار حسب عدد الأفراد ونوع الطلب.
-
 </p>
 
 <div style="margin-top:25px;">
 
 <a
 href="https://wa.me/201044474434?text=السلام عليكم، أرغب في الاستفسار عن الصواني والعزائم"
-target="_blank">
+target="_blank"
+data-i18n="whatsappBooking">
 
 احجز عبر واتساب
 
@@ -90,7 +112,8 @@ target="_blank">
 
 <a
 href="tel:01044474434"
-style="margin-right:10px;">
+style="margin-right:10px;"
+data-i18n="callNow">
 
 اتصال مباشر
 
@@ -108,7 +131,11 @@ style="margin-right:10px;">
 
 <p>
 © <span id="year"></span>
+
+<span data-i18n="footerRights">
 مضغوط ومندي - جميع الحقوق محفوظة
+</span>
+
 </p>
 
 </footer>
@@ -117,7 +144,8 @@ style="margin-right:10px;">
 document.getElementById("year").textContent =
 new Date().getFullYear();
 </script>
-
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
 </body>
 
 </html>

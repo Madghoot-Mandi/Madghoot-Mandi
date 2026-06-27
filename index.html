@@ -24,7 +24,7 @@
 ```
 <!-- شريط التنبيه -->
 
-<div class="top-bar">
+<div class="top-bar" data-i18n="topBar">
     ⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
 </div>
 
@@ -37,24 +37,46 @@
     <img src="images/logo.png" alt="مضغوط ومندي">
 
     <div>
-        <h2>مضغوط ومندي</h2>
-        <span>نكهات خليجية أصيلة</span>
+      <h2 data-i18n="logoTitle">
+مضغوط ومندي
+</h2>
+
+<span data-i18n="logoSubtitle">
+نكهات خليجية أصيلة
+</span>
     </div>
 
 </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="menu.html">المنيو</a></li>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
+   <ul class="nav-links">
+
 <li>
-<a href="cart.html">
+<a href="index.html" data-i18n="home">الرئيسية</a>
+</li>
+
+<li>
+<a href="menu.html" data-i18n="menu">المنيو</a>
+</li>
+
+<li>
+<a href="#about" data-i18n="about">من نحن</a>
+</li>
+
+<li>
+<a href="#contact" data-i18n="contact">تواصل معنا</a>
+</li>
+
+<li>
+<a href="cart.html" data-i18n="cart">
 🛒 السلة
 </a>
 </li>
-    </ul>
 
+</ul>
+   
+<button id="languageBtn" onclick="toggleLanguage()">
+    🇬🇧 English
+</button>
 </nav>
 
 <section class="hero">
@@ -63,22 +85,25 @@
 
     <div class="hero-content">
 
-        <h1>
-            مضغوط ومندي
-        </h1>
+      <h1 data-i18n="heroTitle">
+مضغوط ومندي
+</h1>
 
-        <h2>
-            نكهات خليجية أصيلة
-        </h2>
+      <h2 data-i18n="heroSubtitle">
+نكهات خليجية أصيلة
+</h2>
 
-        <p>
-            أشهى أطباق المندي والمضغوط والمسخن
-            بطابع خليجي أصيل وجودة لا تضاهى
-        </p>
+    <p data-i18n="heroDescription">
+    أشهى أطباق المندي والمضغوط والمسخن
+    بطابع خليجي أصيل وجودة لا تضاهى
+</p>
 
-        <a href="menu.html" class="hero-btn">
-            اطلب الآن
-        </a>
+       <a
+href="menu.html"
+class="hero-btn"
+data-i18n="heroButton">
+اطلب الآن
+</a>
 
     </div>
 
@@ -90,14 +115,14 @@
 
     <div class="container">
 
-        <h2>
-            من نحن
-        </h2>
+<h2 data-i18n="aboutTitle">
+من نحن
+</h2>
 
-        <p>
-            في مضغوط ومندي نقدم أشهى الأطباق الخليجية المحضرة يومياً بأفضل المكونات وأعلى معايير الجودة.
-            نحرص على تقديم تجربة طعام مميزة تجمع بين النكهة الأصيلة والطهي الاحترافي لتلبية احتياجات الأفراد والعائلات والعزائم الخاصة.
-        </p>
+<p data-i18n="aboutDescription">
+في مضغوط ومندي نقدم أشهى الأطباق الخليجية المحضرة يومياً بأفضل المكونات وأعلى معايير الجودة.
+نحرص على تقديم تجربة طعام مميزة تجمع بين النكهة الأصيلة والطهي الاحترافي لتلبية احتياجات الأفراد والعائلات والعزائم الخاصة.
+</p>
 
     </div>
 
@@ -109,31 +134,40 @@
 
     <div class="container">
 
-        <h2>
-            لماذا تختارنا؟
-        </h2>
+       <h2 data-i18n="featuresTitle">
+لماذا تختارنا؟
+</h2>
 
         <div class="features-grid">
 
             <div class="feature-card">
-                <h3>طعم خليجي أصيل</h3>
-                <p>
-                    وصفات تقليدية بطابع خليجي مميز.
-                </p>
+<h3 data-i18n="feature1Title">
+طعم خليجي أصيل
+</h3>
+
+<p data-i18n="feature1Desc">
+وصفات تقليدية بطابع خليجي مميز.
+</p>
             </div>
 
             <div class="feature-card">
-                <h3>مكونات طازجة</h3>
-                <p>
-                    نستخدم أفضل المكونات المختارة يومياً.
-                </p>
+<h3 data-i18n="feature2Title">
+مكونات طازجة
+</h3>
+
+<p data-i18n="feature2Desc">
+نستخدم أفضل المكونات المختارة يومياً.
+</p>
             </div>
 
             <div class="feature-card">
-                <h3>عزائم وصواني</h3>
-                <p>
-                    تجهيز الطلبات الكبيرة والمناسبات الخاصة.
-                </p>
+<h3 data-i18n="feature3Title">
+عزائم وصواني
+</h3>
+
+<p data-i18n="feature3Desc">
+تجهيز الطلبات الكبيرة والمناسبات الخاصة.
+</p>
             </div>
 
         </div>
@@ -150,21 +184,27 @@
 
     <div class="container">
 
-        <h2>
-            تواصل معنا
-        </h2>
+       <h2 data-i18n="contactTitle">
+تواصل معنا
+</h2>
 
         <div class="contact-links">
 
             <!-- ضع رابط صفحتك على فيسبوك هنا -->
-            <a href="#" target="_blank">
-                فيسبوك
-            </a>
+           <a
+href="#"
+target="_blank"
+data-i18n="contact.facebook">
+فيسبوك
+</a>
 
             <!-- واتساب -->
-            <a href="https://wa.me/201044474434" target="_blank">
-                واتساب
-            </a>
+          <a
+href="https://wa.me/201044474434"
+target="_blank"
+data-i18n="contact.whatsapp">
+واتساب
+</a>
 
             <!-- اتصال مباشر -->
             <a href="tel:01044474434">
@@ -180,7 +220,9 @@
 
 <div class="container">
 
-<h2>من أعمالنا</h2>
+<h2 data-i18n="galleryTitle">
+من أعمالنا
+</h2>
 
 <div class="gallery-grid">
 
@@ -197,9 +239,17 @@
 <!-- الفوتر -->
 
 <footer>
-    <p>
-        © <span id="year"></span> مضغوط ومندي - جميع الحقوق محفوظة
-    </p>
+  <p>
+
+© <span id="year"></span>
+
+<span data-i18n="footer.rights">
+
+مضغوط ومندي - جميع الحقوق محفوظة
+
+</span>
+
+</p>
 </footer>
 
 <script>
@@ -207,7 +257,8 @@
         new Date().getFullYear();
 </script>
 ```
-
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
 </body>
 
 </html>

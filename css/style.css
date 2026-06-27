@@ -339,8 +339,13 @@ font-size:18px;
     border-radius:15px;
     text-align:center;
     box-shadow:0 4px 15px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.3s;
 }
-
+.category-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
 .category-card h3{
     color:#8b5e34;
     margin-bottom:15px;
@@ -373,7 +378,9 @@ overflow:hidden;
 }
 
 .category-card img{
-transition:.4s;
+    transition:.4s;
+    width:100%;
+    display:block;
 }
 
 .category-card:hover img{
@@ -459,4 +466,110 @@ border-radius:15px;
 .menu-title{
     text-align:center;
     margin-bottom:40px;
+}
+html[dir="ltr"]{
+    direction:ltr;
+}
+
+html[dir="ltr"] .navbar{
+    flex-direction:row;
+}
+
+html[dir="ltr"] .hero{
+    padding-left:8%;
+    padding-right:0;
+}
+
+html[dir="ltr"] .hero-content{
+    left:8%;
+    right:auto;
+    text-align:left;
+}
+
+html[dir="ltr"] .nav-links{
+    flex-direction:row;
+}
+
+html[dir="ltr"] .logo{
+    flex-direction:row;
+}
+
+html[dir="ltr"] .contact-links{
+    direction:ltr;
+}
+
+html[dir="ltr"] .cart-table{
+    direction:ltr;
+}
+
+html[dir="ltr"] .form-box input,
+html[dir="ltr"] .form-box textarea{
+    text-align:left;
+}
+button,
+.hero-btn,
+.add-cart-btn{
+    transition:.3s ease;
+}
+
+button:hover,
+.hero-btn:hover,
+.add-cart-btn:hover{
+    transform:translateY(-3px);
+}
+.trays-list{
+    list-style: none;
+    padding: 0;
+    margin: 25px auto;
+    width: fit-content;      /* يخلي عرض القائمة على قد المحتوى */
+}
+
+.trays-list li{
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+[dir="rtl"] .trays-list{
+    text-align: right;
+}
+
+[dir="ltr"] .trays-list{
+    text-align: left;
+}
+
+/* توسيط محتوى الكارت بالكامل */
+.category-card{
+    text-align: center;
+}
+#languageBtn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    background:#fff;
+    border:2px solid #c89b3c;
+    border-radius:8px;
+
+    padding:10px 16px;
+
+    cursor:pointer;
+    font-size:16px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+#languageBtn:hover{
+    background:#c89b3c;
+    color:#fff;
+}
+
+.flag-icon{
+    width:22px;
+    height:22px;
+    object-fit:cover;
+    border-radius:50%;
+    flex-shrink:0;
 }

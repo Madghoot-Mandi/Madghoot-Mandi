@@ -15,31 +15,45 @@
 
 <body>
 
-<div class="top-bar">
-⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
+<div class="top-bar" data-i18n="topBar">
+    ⚠️ يرجى الحجز قبل موعد الطلب بـ 24 ساعة لضمان تجهيز الطلب بأفضل جودة.
 </div>
 
 <nav class="navbar">
 
 <div class="logo">
-    <img src="images/logo.png">
+    <img
+src="images/logo.png"
+alt="مضغوط ومندي">
 
-    <div class="logo-text">
-        <h2>مضغوط ومندي</h2>
-        <span>نكهات خليجية أصيلة</span>
+    <div>
+      <h2 data-i18n="logoTitle">
+مضغوط ومندي
+</h2>
+
+<span data-i18n="logoSubtitle">
+نكهات خليجية أصيلة
+</span>
     </div>
+
 </div>
 
- <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="menu.html">المنيو</a></li>
-<li>
-<a href="cart.html">
-🛒 السلة
-</a>
-</li>
-    </ul>
+<ul class="nav-links">
+    <li>
+        <a href="index.html" data-i18n="home">الرئيسية</a>
+    </li>
 
+    <li>
+        <a href="menu.html" data-i18n="menu">المنيو</a>
+    </li>
+
+    <li>
+        <a href="cart.html" data-i18n="cart">🛒 السلة</a>
+    </li>
+</ul>
+<button id="languageBtn" onclick="toggleLanguage()">
+    🇬🇧 English
+</button>
 
 </nav>
 
@@ -49,7 +63,9 @@
 
 <div class="container">
 
-<h2>مندي الدجاج</h2>
+<h2 data-i18n="mandiSection">
+مندي الدجاج
+</h2>
 
 <div class="categories-grid">
 
@@ -58,20 +74,25 @@
 <img src="https://images.unsplash.com/photo-1514516345957-556ca7f68af9?w=600"
 style="width:100%;border-radius:10px;">
 
-<h3>مندي دجاج كامل</h3>
+<h3 data-i18n="mandiChickenFullTitle">
+مندي دجاج كامل
+</h3>
 
-<p>
-دجاج كامل متبل بالبهارات الخليجية مع أرز مندي فاخر.
+<p data-i18n="mandiChickenFullDesc">
+    دجاج كامل متبل بالبهارات الخليجية مع أرز مندي فاخر.
 </p>
 
-<p><strong>السعر: 350 جنيه</strong></p>
-
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('mandiChickenFull',350)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -82,20 +103,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600"
 style="width:100%;border-radius:10px;">
 
-<h3>مندي نصف دجاج</h3>
+<h3 data-i18n="mandiChickenHalfTitle">
+مندي نصف دجاج
+</h3>
 
-<p>
-نصف دجاجة مع أرز مندي وتتبيلة أصلية.
+<p data-i18n="mandiChickenHalfDesc">
+    نصف دجاجة مع أرز مندي وتتبيلة أصلية.
 </p>
 
-<p><strong>السعر: 220 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('mandiChickenHalf',220)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -113,7 +140,9 @@ onclick="addToCart(
 
 <div class="container">
 
-<h2>مضغوط الدجاج</h2>
+<h2 data-i18n="madghoutSection">
+مضغوط الدجاج
+</h2>
 
 <div class="categories-grid">
 
@@ -122,20 +151,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600"
 style="width:100%;border-radius:10px;">
 
-<h3>مضغوط دجاج كامل</h3>
+<h3 data-i18n="madghoutChickenFullTitle">
+مضغوط دجاج كامل
+</h3>
 
-<p>
-دجاج مطهو على الطريقة الخليجية مع أرز المضغوط.
+<p data-i18n="madghoutChickenFullDesc">
+    دجاج مطهو على الطريقة الخليجية مع أرز المضغوط.
 </p>
 
-<p><strong>السعر: 360 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('madghoutChickenFull',360)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -146,20 +181,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"
 style="width:100%;border-radius:10px;">
 
-<h3>مضغوط نصف دجاج</h3>
+<h3 data-i18n="madghoutChickenHalfTitle">
+مضغوط نصف دجاج
+</h3>
 
-<p>
-نصف دجاجة مع أرز المضغوط والبهارات الخاصة.
+<p data-i18n="madghoutChickenHalfDesc">
+    نصف دجاجة مع أرز المضغوط والبهارات الخاصة.
 </p>
 
-<p><strong>السعر: 230 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('madghoutChickenHalf',230)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -177,8 +218,9 @@ onclick="addToCart(
 
 <div class="container">
 
-<h2>المسخن</h2>
-
+<h2 data-i18n="musakhanSection">
+المسخن
+</h2>
 <div class="categories-grid">
 
 <div class="category-card">
@@ -186,20 +228,26 @@ onclick="addToCart(
 <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600"
 style="width:100%;border-radius:10px;">
 
-<h3>مسخن دجاج</h3>
+<h3 data-i18n="musakhanChickenTitle">
+مسخن دجاج
+</h3>
 
-<p>
-مسخن محضر بالبصل والسماق والزيت البلدي.
+<p data-i18n="musakhanChickenDesc">
+    مسخن محضر بالبصل والسماق والزيت البلدي.
 </p>
 
-<p><strong>السعر: 180 جنيه</strong></p>
+<p>
+<strong>
+<span data-i18n="priceLabel">السعر</span>:
+350
+<span data-i18n="currency">جنيه</span>
+</strong>
+</p>
 
 <button
 class="add-cart-btn"
-onclick="addToCart(
-'مندي دجاج كامل',
-350
-)">
+onclick="addToCart('musakhanChicken',180)"
+data-i18n="addToCart">
 أضف للسلة
 </button>
 
@@ -215,7 +263,11 @@ onclick="addToCart(
 
 <p>
 © <span id="year"></span>
+
+<span data-i18n="footerRights">
 مضغوط ومندي - جميع الحقوق محفوظة
+</span>
+
 </p>
 
 </footer>
@@ -225,6 +277,8 @@ document.getElementById("year").textContent =
 new Date().getFullYear();
 </script>
 <script src="js-cart.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
 </body>
 
 </html>
